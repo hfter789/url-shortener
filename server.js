@@ -19,6 +19,7 @@ app.get('/new/*', function(req, res) {
     var host = req.headers.host;
     var protocol = req.secure ? 'https://' : 'http://';
     var newUrl = protocol + host + '/' + counter;
+    // does not know if there is an err or not
     pushToDataBase(counter, url);
     counter++;
     res.send({
