@@ -50,7 +50,7 @@ MongoClient.connect(url, function (err, db) {
     collection = db.collection('url');
     getCounter().then(function(arr) {
         if (arr.length) {
-            counter = arr[0]._id;
+            counter = arr[0]._id + 1;
         } else {
             counter = 0;
         }
